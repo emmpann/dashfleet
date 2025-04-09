@@ -57,7 +57,7 @@ class LiveTrackViewModel @Inject constructor(
                     val calculated = calculateSpeed(
                         current.latitude, current.longitude, next.latitude, next.longitude, delayMillis / 1000
                     )
-                    _currentSpeed.postValue("%.2f".format(calculated))
+                    _currentSpeed.postValue("%.2f km/h".format(calculated))
                     calculated
                 } else {
                     _currentSpeed.postValue("0.0")
