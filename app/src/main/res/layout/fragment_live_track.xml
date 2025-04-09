@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".livetrack.LiveTrackFragment">
+
+    <fragment
+        android:id="@+id/google_maps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_bus_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="bus name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_engine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="72dp"
+                android:src="@drawable/engine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_engine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engine"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_engine_status"
+                app:layout_constraintEnd_toStartOf="@+id/tv_engine_status"
+                app:layout_constraintStart_toStartOf="@+id/icon_engine"
+                app:layout_constraintTop_toBottomOf="@+id/icon_engine" />
+
+            <TextView
+                android:id="@+id/tv_engine_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textStyle="bold"
+                android:text="On"
+                app:layout_constraintEnd_toEndOf="@+id/icon_engine"
+                app:layout_constraintStart_toEndOf="@+id/text_engine"
+                app:layout_constraintTop_toBottomOf="@+id/icon_engine" />
+
+            <ImageView
+                android:id="@+id/icon_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:src="@drawable/speed"
+                app:layout_constraintEnd_toStartOf="@+id/icon_door"
+                app:layout_constraintStart_toEndOf="@+id/icon_engine"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_speed"
+                app:layout_constraintEnd_toStartOf="@+id/tv_speed"
+                app:layout_constraintStart_toStartOf="@+id/icon_speed"
+                app:layout_constraintTop_toBottomOf="@+id/icon_speed" />
+
+            <TextView
+                android:id="@+id/tv_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="52 km/h"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/icon_speed"
+                app:layout_constraintStart_toEndOf="@+id/text_speed"
+                app:layout_constraintTop_toBottomOf="@+id/icon_speed" />
+
+            <ImageView
+                android:id="@+id/icon_door"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="56dp"
+                android:src="@drawable/door"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_door"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Door"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_door_status"
+                app:layout_constraintEnd_toStartOf="@+id/tv_door_status"
+                app:layout_constraintStart_toStartOf="@+id/icon_door"
+                app:layout_constraintTop_toBottomOf="@+id/icon_door" />
+
+            <TextView
+                android:id="@+id/tv_door_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Closed"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/icon_door"
+                app:layout_constraintStart_toEndOf="@+id/text_door"
+                app:layout_constraintTop_toBottomOf="@+id/icon_door" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

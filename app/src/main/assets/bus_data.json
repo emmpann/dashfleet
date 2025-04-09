@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bus-001",
+    "name": "Bus TransJakarta 01"
+  },
+  {
+    "id": "bus-002",
+    "name": "Bus TransJakarta 02"
+  },
+  {
+    "id": "bus-003",
+    "name": "Bus TransJakarta 03"
+  },
+  {
+    "id": "bus-004",
+    "name": "Bus TransJakarta 04"
+  },
+  {
+    "id": "bus-005",
+    "name": "Bus TransJakarta 05"
+  },
+  {
+    "id": "bus-006",
+    "name": "Bus TransJakarta 06"
+  },
+  {
+    "id": "bus-007",
+    "name": "Bus TransJakarta 07"
+  },
+  {
+    "id": "bus-008",
+    "name": "Bus TransJakarta 08"
+  },
+  {
+    "id": "bus-009",
+    "name": "Bus TransJakarta 09"
+  },
+  {
+    "id": "bus-010",
+    "name": "Bus TransJakarta 10"
+  }
+]
